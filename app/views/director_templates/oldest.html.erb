@@ -1,0 +1,4 @@
+<h1>Eldest director</h1>
+<%x = Director.all.order({:dob => :asc}).last%>
+<% date = x.dob%>
+The eldest director in our dataset right now is <a href="/directors/<%=x.id%>"><%= x.name %><a/>, born on  <%= date.strftime("\%B \%d, %Y.") %>
